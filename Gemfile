@@ -7,7 +7,11 @@ gem 'devise'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', :group => [:development, :test]
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
 
 
 # Gems used only for assets and not required
@@ -35,11 +39,6 @@ gem 'jquery-rails'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-# for rails to talk to postgreSQL on the heroku stack
-group :production do
-  gem 'pg', '0.12.2'
-end
 
 # To use debugger
 # gem 'debugger'
