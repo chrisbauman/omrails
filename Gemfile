@@ -36,5 +36,10 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
+# for rails to talk to postgreSQL on the heroku stack
+group :production do
+  gem 'pg', '0.12.2'
+end
+
 # To use debugger
 # gem 'debugger'
