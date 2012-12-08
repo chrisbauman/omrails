@@ -41,7 +41,7 @@ h1 {
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   text-align: center;
   font-weight: normal;
   color: #999;
@@ -69,4 +69,52 @@ p {
 #logo:hover {
   color: black;
   text-decoration: none;
+}
+
+#ingredients {
+	margin-left:auto;
+	margin-right:auto;
+	width: 800px;
+}
+#amountLabel {
+	width: 400px;
+	float: right;
+}
+
+#fruit {
+	width: 800px;
+}
+
+.fruitSelect {
+	width: 200px;
+}
+
+#fruitSelectLeft {
+	float: left;
+}
+
+#fruitSelectRight {
+	float: left;
+}
+
+.cupsAmt {
+	width: 400px;
+	float: left;
+	text-align: center;
+}
+
+#other {
+	width: 800px;
+}
+.otherIngredient {
+	width: 400px;
+	float: left;
+	margin-bottom: 20px;
+	clear: left;
+}
+
+.nextButton {
+	float: right;
+	margin-right: 150px;
+	margin-top: 30px;
 }

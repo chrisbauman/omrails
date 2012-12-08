@@ -1,16 +1,97 @@
 <% if user_signed_in? %>
-	<h1>You're signed in!</h1>
-	
+	<h1>Ingredients</h1>
+<div id="ingredients">
+	<form>
+		<h2 id="amountLabel">Amount</h2>
+		<fieldset id="fruit">
+			<legend>Fruit</legend>
+			<div id="fruitSelectLeft">
+				<div class="fruitSelect">
+			<label class="radio">
+			  <input type="radio" name="optionsRadios" id="fruitRadio" value="Peach">
+			  Peach
+			</label>
+			<label class="radio">
+			  <input type="radio" name="optionsRadios" id="fruitRadio" value="Strawberry">
+			  Strawberry
+			</label>
+			<label class="radio">
+			  <input type="radio" name="optionsRadios" id="fruitRadio" value="Blueberry">
+			  Blueberry
+			</label>
+			<label class="radio">
+			  <input type="radio" name="optionsRadios" id="fruitRadio" value="Apple">
+			  Apple
+			</label>
+				</div>
+			</div>
+			<div id="fruitSelectRight">
+				<div class="fruitSelect">
+			<label class="radio">
+			  <input type="radio" name="optionsRadios" id="fruitRadio" value="Blackberry">
+			  Blackberry
+			</label>
+			<label class="radio">
+			  <input type="radio" name="optionsRadios" id="fruitRadio" value="Orange">
+			  Orange
+			</label>
+			<label class="radio">
+			  <input type="radio" name="optionsRadios" id="fruitRadio" value="Grape">
+			  Grape
+			</label>
+			<label class="radio">
+			  <input type="radio" name="optionsRadios" id="fruitRadio" value="Boysenberry">
+			  Boysenberry
+			</label>
+				</div>
+			</div>
+			<div class="cupsAmt">
+				<div class="input-append">
+				  <input class="span1" id="fruitCups" type="text">
+				  <span class="add-on">cups</span>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset id="other">
+			<legend>Other Ingredients</legend>
+			<div class="otherIngredient">
+				<label>Sugar</label>
+			</div>
+			<div class="cupsAmt">
+				<div class="input-append">
+				  <input class="span1" id="sugarCups" type="text">
+				  <span class="add-on">cups</span>
+				</div>
+			</div>
+			<div class="otherIngredient">
+				<label>Pectin</label>
+			</div>
+			<div class="cupsAmt">
+				<div class="input-append">
+				  <input class="span1" id="pectinCups" type="text">
+				  <span class="add-on">cups</span>
+				</div>
+			</div>
+			<div class="otherIngredient">
+				<label>Lemon Juice</label>
+			</div>
+			<div class="cupsAmt">
+				<div class="input-append">
+				  <input class="span1" id="juiceCups" type="text">
+				  <span class="add-on">cups</span>
+				</div>
+			</div>
+		</fieldset>
+		<button type="submit" class="btn btn-large btn-primary nextButton">Next</button>
+	</form>
+</div>	
 <% else %>
 <div class="center hero-unit">
-    <h1>Welcome to One Month Rails</h1>
+    <h1>Welcome to Labelizer</h1>
 
     <h2>
-      You've found the home page for the
-      <a href="http://omrails.com/">One Month Rails</a>
-      first application.
+      You can now create labels for your homemade jams!
     </h2>
-
     <%= link_to "Sign up now!", new_user_registration_path, 
                                 class: "btn btn-large btn-primary" %>
 </div>
