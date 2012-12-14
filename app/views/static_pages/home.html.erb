@@ -3,7 +3,7 @@
 <div id="ingredients">
 	<form>
 		<h2 id="amountLabel">Amount</h2>
-		<fieldset id="fruit">
+		<fieldset id="data">
 			<legend>Fruit</legend>
 			<div id="fruitSelectLeft">
 				<div class="fruitSelect">
@@ -82,7 +82,7 @@
 				</div>
 			</div>
 		</fieldset>
-		<button type="submit" class="btn btn-large btn-primary nextButton">Next</button>
+		<%= link_to "Next", container_path, class: "btn btn-large btn-primary nextButton" %>
 	</form>
 </div>	
 <% else %>
@@ -91,7 +91,7 @@
 
     <h2>
       You can now create labels for your homemade jams!
-    </h2>
+    </h2></br>
     <%= link_to "Sign up now!", new_user_registration_path, 
                                 class: "btn btn-large btn-primary" %>
 </div>
