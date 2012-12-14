@@ -1,0 +1,36 @@
+function shrink()
+    {
+    	var textSpan = document.getElementById("dynamicSpan");
+    	var textDiv = document.getElementById("dynamicDiv");
+
+    	textSpan.style.fontSize = 64;
+
+    	while(textSpan.offsetHeight > textDiv.offsetHeight)
+    	{
+    		textSpan.style.fontSize = parseInt(textSpan.style.fontSize) - 1;
+    	}
+    }
+function shrinkStuff()
+    {
+    	var textSpan = document.getElementById("dynamicSpanStuff");
+    	var textDiv = document.getElementById("dynamicDivStuff");
+
+    	textSpan.style.fontSize = 20;
+
+    	while(textSpan.offsetHeight > textDiv.offsetHeight)
+    	{
+    		textSpan.style.fontSize = parseInt(textSpan.style.fontSize) - 1;
+    	}
+    }
+function shrinkStuff()
+    {
+    	var textSpan = document.getElementById("dynamicSpanSize");
+    	var textDiv = document.getElementById("dynamicDivSize");
+
+    	textSpan.style.fontSize = 12;
+
+    	while(textSpan.offsetHeight > textDiv.offsetHeight)
+    	{
+    		textSpan.style.fontSize = parseInt(textSpan.style.fontSize) - 1;
+    	}
+    }

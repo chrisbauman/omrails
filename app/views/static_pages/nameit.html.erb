@@ -1,0 +1,29 @@
+<% if user_signed_in? %>
+	<h1>Name It</h1>
+<div id="ingredients">
+	<form>
+		<fieldset id="data">
+			<legend>Name Your Jam</legend>
+			<div id="fruitSelectLeft">
+				<div class="fruitSelect">
+					<input type="text" class="span3" placeholder="Sam's Razzle Berry">
+					<span class="help-block">Have fun with this.</span>
+				</div>
+			</div>
+		
+		</fieldset>
+		<%= link_to "Next", yourlabel_path, class: "btn btn-large btn-primary nextButton" %>
+	</form>
+</div>	
+<% else %>
+<div class="center hero-unit">
+    <h1>Welcome to Labelizer</h1>
+
+    <h2>
+      You can now create labels for your homemade jams!
+    </h2></br>
+    <%= link_to "Sign up now!", new_user_registration_path, 
+                                class: "btn btn-large btn-primary" %>
+</div>
+
+<% end %>

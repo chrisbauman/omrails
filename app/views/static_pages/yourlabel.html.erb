@@ -1,0 +1,82 @@
+<% if user_signed_in? %>
+	<h1>Your Label</h1>
+<div id="ingredients">
+	
+<div id="label">
+	<div id="front" onload="shrink()" onload="shrinkStuff()">
+	    <div id="dynamicDiv"><span id="dynamicSpan">Sam's Razzleberry Surprise</span></div>
+		<div id="dynamicDivStuff"><span id="dynamicSpanStuff">Ingredients: Peach, Sugar, Pectin, Lemon Juice</span></div>
+		<div id="dynamicDivSize"><span id="dynamicSpanSize">8 oz</span></div>
+	</div>
+		<!-- The following XHTML snippet builds a basic nutrition label when accompanied by the
+			nutrition.css stylesheet. The code is free, and you may use it as you wish. Crediting the author
+			is always appreciated.
+			Jonathon Eric Cihlar, January 2007
+		-->
+	<table class="nutrition" summary="This table summarizes nutritional information">
+			<tr>
+			<th colspan="2">Nutrition Facts</th>
+		</tr>
+		<tr id="servings">
+			<td colspan="2">Serving Size 2 tbsp (13g)<br />Servings Per Jar 12</td>
+		</tr>
+		<tr>
+			<td colspan="2">Amount Per Serving</td>
+		</tr>
+		<tr id="calories">
+			<td><strong>Calories</strong> 100</td>
+			<td class="dv">Fat Calories 0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="dv">% Daily Value *</td>
+		</tr>
+		<tr>
+			<td><strong>Total Fat</strong> 9g</td>
+			<td class="dv">14%</td>
+		</tr>
+		<tr>
+			<td><strong>Sodium</strong> 160mg</td>
+			<td class="dv">7%</td>
+		</tr>
+		<tr>
+			<td><strong>Total Carbohydrate</strong> 29g</td>
+			<td class="dv">10%</td>
+		</tr>
+		<tr>
+			<td class="sub">Dietary Fiber 2g</td>
+			<td class="dv">8%</td>
+		</tr>
+		<tr>
+			<td class="sub">Sugars 18g</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><strong>Protein</strong> 2g</td>
+			<td class="dv">4%</td>
+		</tr>
+		<tr>
+			<td id="disclaimer" colspan="2">
+				* The Percent Daily Values are based on a 2,000 calorie diet.	
+			</td>
+		</tr>
+	</table>
+	
+	
+</div>
+		
+		<%= link_to "Print", yourlabel_path, class: "btn btn-large btn-primary nextButton" %>
+</div>	
+<% else %>
+<div class="center hero-unit">
+    <h1>Welcome to Labelizer</h1>
+
+    <h2>
+      You can now create labels for your homemade jams!
+    </h2>
+</br>
+    <%= link_to "Sign up now!", new_user_registration_path, 
+                                class: "btn btn-large btn-primary" %>
+</div>
+
+<% end %>
